@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TEC-08 — Mapa del caso</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="title">TEC-08</div>
+        <div class="subtitle">Mapa del Caso (vista principal)</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Index</a>
+        <a href="case-map.html" aria-current="page">Mapa del caso</a>
+        <a href="inputs.html">Entradas</a>
+        <a href="alternatives.html">Alternativas</a>
+        <a href="compare.html">Comparación</a>
+        <a href="outputs.html">Salidas</a>
+        <a href="evidence.html">Evidencias</a>
+      </nav>
+    </div>
+
+    <div class="page-title">
+      <h1>CASO: SET = “SET Chiclayo Norte” · MT (Alimentador) = “ALIM-MT-07”</h1>
+      <div class="hint">Map-first + panel lateral. IDs se asignan al generar alternativas.</div>
+    </div>
+
+    <div class="grid app">
+      <!-- MAP -->
+      <section class="map" aria-label="Mapa GIS">
+        <header>
+          <div class="left">
+            <div class="kicker">Capas · edición · demanda</div>
+            <div class="title">Mapa GIS del caso</div>
+          </div>
+          <div class="toolbar" aria-label="Herramientas de mapa">
+            <span class="btn">Capas</span>
+            <span class="btn">Leyenda</span>
+            <span class="btn">Medir</span>
+            <span class="btn primary">Mover SET</span>
+            <span class="btn primary">Waypoints</span>
+            <span class="btn">Recalcular ruta</span>
+            <span class="btn">Detalle tramo/punto</span>
+          </div>
+        </header>
+
+        <div class="canvas">
+          <div class="overlay" aria-label="Overlays">
+            <div class="box">
+              <h4>Contexto del Caso</h4>
+              <div class="mini">
+                <div>SET objetivo: <strong>SET Chiclayo Norte</strong></div>
+                <div>Alimentador MT: <strong>ALIM-MT-07</strong></div>
+                <div>SRID detectado: <strong>EPSG:32717</strong></div>
+                <div>Estado: <strong>Alternativas generadas</strong></div>
+              </div>
+            </div>
+
+            <div class="box">
+              <h4>Demanda (heatmap)</h4>
+              <div class="mini">
+                <div>Horizon: <strong>5 años</strong></div>
+                <div>Fuente: <strong>series + proxy urbano</strong></div>
+                <div>Salida: <strong>heatmap + tabla</strong></div>
+              </div>
+            </div>
+
+            <div class="box">
+              <h4>Restricciones (detalle)</h4>
+              <div class="mini">
+                <div><span class="badge"><span class="dot med"></span> Ambiental</span> · calidad híbrida</div>
+                <div><span class="badge"><span class="dot bad"></span> Arqueológica</span> · cobertura parcial</div>
+                <div><span class="badge"><span class="dot good"></span> Servidumbre</span> · validada</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <div>Atajos: [Click] seleccionar elemento · [Shift+Click] detalle · [Ctrl] snap waypoint</div>
+          <div class="footer-actions">
+            <span class="btn small">Guardar vista</span>
+            <span class="btn small">Compartir link</span>
+            <span class="btn small">Ir a comparación</span>
+          </div>
+        </footer>
+      </section>
+
+      <!-- RIGHT PANEL -->
+      <aside class="panel" aria-label="Panel lateral del caso">
+        <header>
+          <div class="hgroup">
+            <div class="kicker">Panel del Caso</div>
+            <div class="name">Entradas · Alternativas · Comparación · Salidas</div>
+          </div>
+          <div class="tabs" aria-label="Tabs">
+            <a class="tab" href="inputs.html">Entradas</a>
+            <a class="tab" href="alternatives.html">Alternativas</a>
+            <a class="tab" href="compare.html">Comparación</a>
+            <a class="tab" href="outputs.html">Salidas</a>
+            <a class="tab" href="evidence.html">Evidencias</a>
+          </div>
+        </header>
+
+        <div class="content">
+          <section class="section">
+            <h2>Resumen</h2>
+            <div class="row cols-2">
+              <div class="field">
+                <label>SET</label>
+                <div class="input"><span>SET Chiclayo Norte</span><span class="ghost">ID: SET-ALT-001</span></div>
+              </div>
+              <div class="field">
+                <label>MT (Alimentador)</label>
+                <div class="input"><span>ALIM-MT-07</span><span class="ghost">ID: MT-ALT-003</span></div>
+              </div>
+            </div>
+
+            <div class="row cols-2" style="margin-top:10px;">
+              <div class="field">
+                <label>Alternativa seleccionada</label>
+                <div class="input"><span>ALT-SET-02</span><span class="ghost">Score 82</span></div>
+              </div>
+              <div class="field">
+                <label>Ruta seleccionada</label>
+                <div class="input"><span>ALT-MT-03</span><span class="ghost">ΔV 3.4%</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Acciones rápidas</h2>
+            <div class="toolbar">
+              <span class="btn primary">Generar alternativas</span>
+              <span class="btn">Recalcular con pesos</span>
+              <span class="btn">Abrir detalle restricción</span>
+              <span class="btn">Ir a comparación</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Elementos seleccionados (detalle)</h2>
+            <div class="sub">Detalle por tramo/punto + evidencias (nivel elemento).</div>
+
+            <div class="item">
+              <div class="head">
+                <div class="left">
+                  <div class="title">Tramo MT — Segmento 14</div>
+                  <div class="meta">ID: MT-SEG-0014 · ALT-MT-03</div>
+                </div>
+                <span class="badge"><span class="dot med"></span> Restricción: Ambiental</span>
+              </div>
+
+              <div class="kv">
+                <div>
+                  <div class="k">Pendiente</div>
+                  <div class="v">6.2%</div>
+                </div>
+                <div>
+                  <div class="k">Cruces</div>
+                  <div class="v">2</div>
+                </div>
+                <div>
+                  <div class="k">Confiabilidad capa</div>
+                  <div class="v">Media (auto) + override: No</div>
+                </div>
+                <div>
+                  <div class="k">Evidencia en CDE</div>
+                  <div class="v">LINK-CDE-00091</div>
+                </div>
+              </div>
+
+              <div class="hr"></div>
+              <div class="toolbar">
+                <span class="btn small">Ver evidencia</span>
+                <span class="btn small">Marcar override</span>
+                <span class="btn small">Crear comentario</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="modal" aria-label="Modal SRID detectado">
+            <div class="top">
+              <div class="name">Confirmación de sistema de referencia (SRID)</div>
+              <span class="badge"><span class="dot good"></span> Detectado</span>
+            </div>
+            <div class="body">
+              Se detectó <strong>EPSG:32717</strong> para capas del caso. Confirma para mantener coherencia GIS/BIM y evitar desalineaciones.
+            </div>
+            <div class="actions">
+              <span class="btn primary">Confirmar EPSG:32717</span>
+              <span class="btn">Cambiar SRID</span>
+              <span class="btn">Ver diagnóstico</span>
+            </div>
+          </section>
+
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
