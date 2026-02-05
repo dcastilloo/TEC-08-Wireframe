@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TEC-08 — Alternativas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="title">TEC-08</div>
+        <div class="subtitle">Alternativas (SET / MT)</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Index</a>
+        <a href="case-map.html">Mapa</a>
+        <a href="inputs.html">Entradas</a>
+        <a href="alternatives.html" aria-current="page">Alternativas</a>
+        <a href="compare.html">Comparación</a>
+        <a href="outputs.html">Salidas</a>
+        <a href="evidence.html">Evidencias</a>
+      </nav>
+    </div>
+
+    <div class="page-title">
+      <h1>Alternativas: candidatos SET + rutas MT</h1>
+      <div class="hint">IDs se asignan al generar alternativas · Edición: mover SET y waypoints MT.</div>
+    </div>
+
+    <div class="grid" style="grid-template-columns: 1fr 1fr .9fr; gap: 12px;">
+      <!-- SET candidates -->
+      <section class="panel" aria-label="Candidatos SET">
+        <header>
+          <div class="hgroup">
+            <div class="kicker">Alternativas SET (2–4)</div>
+            <div class="name">Candidatos de ubicación</div>
+          </div>
+          <div class="toolbar">
+            <span class="btn primary">Generar SET</span>
+            <span class="btn">Mover en mapa</span>
+            <span class="btn">Duplicar</span>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="cards-list">
+            <div class="item">
+              <div class="head">
+                <div class="left">
+                  <div class="title">ALT-SET-01</div>
+                  <div class="meta">ID: SET-ALT-001 · Accesibilidad: media</div>
+                </div>
+                <span class="badge"><span class="dot med"></span> Score parcial: 74</span>
+              </div>
+              <div class="kv">
+                <div><div class="k">Restricciones</div><div class="v">Ambiental: 1 · Arq: 0 · Serv: 1</div></div>
+                <div><div class="k">Confiabilidad</div><div class="v">A: media · Arq: baja · S: alta</div></div>
+              </div>
+              <div class="hr"></div>
+              <div class="toolbar">
+                <span class="btn small">Ver en mapa</span>
+                <span class="btn small">Editar punto</span>
+                <span class="btn small">Evidencias</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="head">
+                <div class="left">
+                  <div class="title">ALT-SET-02</div>
+                  <div class="meta">ID: SET-ALT-002 · Accesibilidad: alta</div>
+                </div>
+                <span class="badge"><span class="dot good"></span> Score parcial: 82</span>
+              </div>
+              <div class="kv">
+                <div><div class="k">Restricciones</div><div class="v">Ambiental: 0 · Arq: 1 · Serv: 0</div></div>
+                <div><div class="k">Confiabilidad</div><div class="v">A: media · Arq: baja · S: alta</div></div>
+              </div>
+              <div class="hr"></div>
+              <div class="toolbar">
+                <span class="btn small">Ver en mapa</span>
+                <span class="btn small">Editar punto</span>
+                <span class="btn small">Evidencias</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MT routes -->
+      <section class="panel" aria-label="Rutas MT">
+        <header>
+          <div class="hgroup">
+            <div class="kicker">Alternativas MT (rutas)</div>
+            <div class="name">Rutas optimizadas</div>
+          </div>
+          <div class="toolbar">
+            <span class="btn primary">Generar rutas</span>
+            <span class="btn">Waypoints</span>
+            <span class="btn">Recalcular</span>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="cards-list">
+            <div class="item">
+              <div class="head">
+                <div class="left">
+                  <div class="title">ALT-MT-01</div>
+                  <div class="meta">ID: MT-ALT-001 · Alimentador: ALIM-MT-07</div>
+                </div>
+                <span class="badge"><span class="dot med"></span> Score parcial: 70</span>
+              </div>
+              <div class="kv">
+                <div><div class="k">Longitud MT</div><div class="v">8.4 km</div></div>
+                <div><div class="k">Caída tensión</div><div class="v">4.1%</div></div>
+                <div><div class="k">Restricciones</div><div class="v">Ambiental: 2 · Arq: 1 · Serv: 0</div></div>
+                <div><div class="k">Confiabilidad</div><div class="v">A: media · Arq: baja · S: alta</div></div>
+              </div>
+              <div class="hr"></div>
+              <div class="toolbar">
+                <span class="btn small">Ver en mapa</span>
+                <span class="btn small">Editar waypoints</span>
+                <span class="btn small">Detalle tramos</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="head">
+                <div class="left">
+                  <div class="title">ALT-MT-03</div>
+                  <div class="meta">ID: MT-ALT-003 · Alimentador: ALIM-MT-07</div>
+                </div>
+                <span class="badge"><span class="dot good"></span> Score parcial: 84</span>
+              </div>
+              <div class="kv">
+                <div><div class="k">Longitud MT</div><div class="v">7.1 km</div></div>
+                <div><div class="k">Caída tensión</div><div class="v">3.4%</div></div>
+                <div><div class="k">Restricciones</div><div class="v">Ambiental: 1 · Arq: 0 · Serv: 1</div></div>
+                <div><div class="k">Confiabilidad</div><div class="v">A: media · Arq: baja · S: alta</div></div>
+              </div>
+              <div class="hr"></div>
+              <div class="toolbar">
+                <span class="btn small">Ver en mapa</span>
+                <span class="btn small">Editar waypoints</span>
+                <span class="btn small">Detalle tramos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Package builder -->
+      <aside class="panel" aria-label="Paquete de alternativa">
+        <header>
+          <div class="hgroup">
+            <div class="kicker">Combinación</div>
+            <div class="name">Paquete (SET + MT)</div>
+          </div>
+          <div class="toolbar">
+            <span class="btn primary">Seleccionar ganador</span>
+            <span class="btn">Enviar a comparación</span>
+          </div>
+        </header>
+
+        <div class="content">
+          <section class="section">
+            <h2>Selección actual</h2>
+            <div class="row cols-2">
+              <div class="field">
+                <label>SET elegido</label>
+                <div class="input"><span>ALT-SET-02</span><span class="ghost">SET-ALT-002</span></div>
+              </div>
+              <div class="field">
+                <label>MT elegido</label>
+                <div class="input"><span>ALT-MT-03</span><span class="ghost">MT-ALT-003</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Resumen del paquete</h2>
+            <div class="kv">
+              <div><div class="k">Longitud MT</div><div class="v">7.1 km</div></div>
+              <div><div class="k">Caída tensión</div><div class="v">3.4%</div></div>
+              <div><div class="k">Restricciones detectadas</div><div class="v">Ambiental: 1 · Serv: 1</div></div>
+              <div><div class="k">Confiabilidad capas</div><div class="v">Híbrida (auto + override)</div></div>
+            </div>
+            <div class="hr"></div>
+            <div class="toolbar">
+              <span class="btn small">Ver detalle por tramo</span>
+              <span class="btn small">Abrir evidencias</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Acciones</h2>
+            <div class="textarea">
+              • “Seleccionar ganador” bloquea SET+MT como propuesta<br>
+              • Envía a “Comparación” para ranking final<br>
+              • IDs ya asignados por elemento (SET/tramos MT)
+            </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
