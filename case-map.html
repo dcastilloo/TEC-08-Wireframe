@@ -4,7 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TEC-08 — Mapa del caso</title>
+
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
 </head>
 <body>
   <div class="container">
@@ -37,18 +46,25 @@
             <div class="kicker">Capas · edición · demanda</div>
             <div class="title">Mapa GIS del caso</div>
           </div>
+
           <div class="toolbar" aria-label="Herramientas de mapa">
-            <span class="btn">Capas</span>
-            <span class="btn">Leyenda</span>
-            <span class="btn">Medir</span>
-            <span class="btn primary">Mover SET</span>
-            <span class="btn primary">Waypoints</span>
-            <span class="btn">Recalcular ruta</span>
-            <span class="btn">Detalle tramo/punto</span>
+            <span class="btn" role="button" tabindex="0" id="btnLayers">Capas</span>
+            <span class="btn" role="button" tabindex="0" id="btnLegend">Leyenda</span>
+            <span class="btn" role="button" tabindex="0" id="btnMeasure">Medir</span>
+
+            <span class="btn primary" role="button" tabindex="0" id="btnMoveSet">Mover SET</span>
+            <span class="btn primary" role="button" tabindex="0" id="btnWaypoints">Waypoints</span>
+
+            <span class="btn" role="button" tabindex="0" id="btnRecalc">Recalcular ruta</span>
+            <span class="btn" role="button" tabindex="0" id="btnDetail">Detalle tramo/punto</span>
           </div>
         </header>
 
         <div class="canvas">
+          <!-- Leaflet map -->
+          <div id="map" aria-label="Mapa Leaflet"></div>
+
+          <!-- Overlays -->
           <div class="overlay" aria-label="Overlays">
             <div class="box">
               <h4>Contexto del Caso</h4>
@@ -77,15 +93,24 @@
                 <div><span class="badge"><span class="dot good"></span> Servidumbre</span> · validada</div>
               </div>
             </div>
+
+            <div class="box">
+              <h4>Modo edición</h4>
+              <div class="mini">
+                <div>• <strong>Mover SET</strong>: click en mapa para reubicar</div>
+                <div>• <strong>Waypoints</strong>: click para añadir puntos y recalcular “wire”</div>
+                <div style="margin-top:6px;color:#777;">(Esto es demo UX, no cálculo real.)</div>
+              </div>
+            </div>
           </div>
         </div>
 
         <footer>
-          <div>Atajos: [Click] seleccionar elemento · [Shift+Click] detalle · [Ctrl] snap waypoint</div>
+          <div>Atajos: [Click] seleccionar · [Shift+Click] detalle · [Ctrl] snap waypoint</div>
           <div class="footer-actions">
-            <span class="btn small">Guardar vista</span>
-            <span class="btn small">Compartir link</span>
-            <span class="btn small">Ir a comparación</span>
+            <span class="btn small" role="button" tabindex="0" id="btnSaveView">Guardar vista</span>
+            <span class="btn small" role="button" tabindex="0" id="btnShare">Compartir link</span>
+            <a class="btn small" href="compare.html">Ir a comparación</a>
           </div>
         </footer>
       </section>
@@ -135,10 +160,10 @@
           <section class="section">
             <h2>Acciones rápidas</h2>
             <div class="toolbar">
-              <span class="btn primary">Generar alternativas</span>
-              <span class="btn">Recalcular con pesos</span>
-              <span class="btn">Abrir detalle restricción</span>
-              <span class="btn">Ir a comparación</span>
+              <span class="btn primary" role="button" tabindex="0">Generar alternativas</span>
+              <span class="btn" role="button" tabindex="0">Recalcular con pesos</span>
+              <span class="btn" role="button" tabindex="0">Abrir detalle restricción</span>
+              <a class="btn" href="compare.html">Ir a comparación</a>
             </div>
           </section>
 
@@ -176,9 +201,9 @@
 
               <div class="hr"></div>
               <div class="toolbar">
-                <span class="btn small">Ver evidencia</span>
-                <span class="btn small">Marcar override</span>
-                <span class="btn small">Crear comentario</span>
+                <span class="btn small" role="button" tabindex="0">Ver evidencia</span>
+                <span class="btn small" role="button" tabindex="0">Marcar override</span>
+                <span class="btn small" role="button" tabindex="0">Crear comentario</span>
               </div>
             </div>
           </section>
@@ -192,13 +217,29 @@
               Se detectó <strong>EPSG:32717</strong> para capas del caso. Confirma para mantener coherencia GIS/BIM y evitar desalineaciones.
             </div>
             <div class="actions">
-              <span class="btn primary">Confirmar EPSG:32717</span>
-              <span class="btn">Cambiar SRID</span>
-              <span class="btn">Ver diagnóstico</span>
+              <span class="btn primary" role="button" tabindex="0">Confirmar EPSG:32717</span>
+              <span class="btn" role="button" tabindex="0">Cambiar SRID</span>
+              <span class="btn" role="button" tabindex="0">Ver diagnóstico</span>
             </div>
           </section>
 
         </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <!-- Map logic -->
+  <script src="map.js"></script>
+</body>
+</html>
+
       </aside>
     </div>
   </div>
