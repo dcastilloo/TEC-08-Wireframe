@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TEC-08 Wireframe — Index</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="title">TEC-08 — Wireframe (MVP)</div>
+        <div class="subtitle">Gestión inteligente de proyectos (SET + MT)</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" aria-current="page">Index</a>
+        <a href="case-map.html">Mapa del caso</a>
+        <a href="inputs.html">Entradas (CDE)</a>
+        <a href="alternatives.html">Alternativas</a>
+        <a href="compare.html">Comparación</a>
+        <a href="outputs.html">Salidas</a>
+        <a href="evidence.html">Evidencias</a>
+      </nav>
+    </div>
+
+    <div class="page-title">
+      <h1>Vistas del wireframe</h1>
+      <div class="hint">Wireframe estructural (sin diseño visual final). Navega por links o revisa previews embebidos.</div>
+    </div>
+
+    <div class="grid cards">
+      <a class="card" href="case-map.html">
+        <div>
+          <h3>Mapa del Caso (principal)</h3>
+          <p>Vista map-first: capas GIS + herramientas de edición (mover SET / waypoints) + panel lateral con tabs.</p>
+        </div>
+        <div class="meta">
+          <span class="pill">Mapa 70%</span><span class="pill">Panel 30%</span><span class="pill">SRID: detect+confirma</span>
+        </div>
+      </a>
+
+      <a class="card" href="inputs.html">
+        <div>
+          <h3>Entradas (desde CDE)</h3>
+          <p>Selección de insumos desde ACC/CDE, checklist de completitud, calidad de capas (auto + override).</p>
+        </div>
+        <div class="meta">
+          <span class="pill">CDE only</span><span class="pill">Calidad híbrida</span><span class="pill">Validación</span>
+        </div>
+      </a>
+
+      <a class="card" href="alternatives.html">
+        <div>
+          <h3>Alternativas (SET y MT separadas)</h3>
+          <p>Gestión de candidatos SET y rutas MT; combinación en “Paquete” con IDs asignados al generar alternativa.</p>
+        </div>
+        <div class="meta">
+          <span class="pill">SET vs MT</span><span class="pill">IDs por elemento</span><span class="pill">Caída de tensión</span>
+        </div>
+      </a>
+
+      <a class="card" href="compare.html">
+        <div>
+          <h3>Comparación y ranking</h3>
+          <p>Tabla comparativa, criterios y pesos por Caso, explicación auditable del score.</p>
+        </div>
+        <div class="meta">
+          <span class="pill">Pesos por Caso</span><span class="pill">Score</span><span class="pill">Justificación</span>
+        </div>
+      </a>
+
+      <a class="card" href="outputs.html">
+        <div>
+          <h3>Salidas y “Emitir paquete”</h3>
+          <p>Congela versión, genera GIS + dataset + BIM LOD2/LOI2 + lámina esquemática + metrados.</p>
+        </div>
+        <div class="meta">
+          <span class="pill">Freeze v#</span><span class="pill">Export</span><span class="pill">Checklist</span>
+        </div>
+      </a>
+
+      <a class="card" href="evidence.html">
+        <div>
+          <h3>Evidencias / CDE</h3>
+          <p>Trazabilidad a nivel elemento: links persistentes, evidencias por tramo/punto y registro de revisión.</p>
+        </div>
+        <div class="meta">
+          <span class="pill">Link por elemento</span><span class="pill">Auditable</span><span class="pill">Revisión</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="page-title">
+      <h1>Previews embebidos</h1>
+      <div class="hint">Útil para revisar todo de un vistazo (wireframe “agregado”).</div>
+    </div>
+
+    <section class="preview-grid">
+      <div class="preview">
+        <header>
+          <div class="name">Mapa del caso</div>
+          <a class="pill" href="case-map.html">Abrir</a>
+        </header>
+        <iframe src="case-map.html" title="Mapa del caso"></iframe>
+      </div>
+
+      <div class="preview">
+        <header>
+          <div class="name">Entradas (CDE)</div>
+          <a class="pill" href="inputs.html">Abrir</a>
+        </header>
+        <iframe src="inputs.html" title="Entradas (CDE)"></iframe>
+      </div>
+
+      <div class="preview">
+        <header>
+          <div class="name">Alternativas</div>
+          <a class="pill" href="alternatives.html">Abrir</a>
+        </header>
+        <iframe src="alternatives.html" title="Alternativas"></iframe>
+      </div>
+
+      <div class="preview">
+        <header>
+          <div class="name">Comparación</div>
+          <a class="pill" href="compare.html">Abrir</a>
+        </header>
+        <iframe src="compare.html" title="Comparación"></iframe>
+      </div>
+
+      <div class="preview">
+        <header>
+          <div class="name">Salidas</div>
+          <a class="pill" href="outputs.html">Abrir</a>
+        </header>
+        <iframe src="outputs.html" title="Salidas"></iframe>
+      </div>
+
+      <div class="preview">
+        <header>
+          <div class="name">Evidencias</div>
+          <a class="pill" href="evidence.html">Abrir</a>
+        </header>
+        <iframe src="evidence.html" title="Evidencias"></iframe>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
