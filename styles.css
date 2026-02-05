@@ -534,3 +534,44 @@ a:hover{ text-decoration: underline; }
   .preview{ grid-column: span 12; }
   .card{ grid-column: span 12; }
 }
+
+/* =========================
+   Leaflet map integration
+   ========================= */
+
+.map .canvas{
+  position: relative; /* importante para posicionar el mapa y overlays */
+}
+
+/* Contenedor del mapa Leaflet */
+#map{
+  position: absolute;
+  inset: 0;
+}
+
+/* Asegura overlays sobre el mapa */
+.map .overlay{
+  z-index: 1000;
+}
+
+/* Mantén header/footer por encima también */
+.map header, .map footer{
+  position: relative;
+  z-index: 1100;
+}
+
+/* Leaflet attribution/controls quedan visibles sobre el mapa */
+.leaflet-control-container{
+  z-index: 900;
+}
+
+/* Botones wireframe con interacción */
+.btn[role="button"]{
+  cursor: pointer;
+  user-select: none;
+}
+.btn.is-active{
+  border-style: solid;
+  background: #fff;
+  font-weight: 800;
+}
