@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TEC-08 — Salidas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="title">TEC-08</div>
+        <div class="subtitle">Salidas y emisión de paquete</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Index</a>
+        <a href="case-map.html">Mapa</a>
+        <a href="inputs.html">Entradas</a>
+        <a href="alternatives.html">Alternativas</a>
+        <a href="compare.html">Comparación</a>
+        <a href="outputs.html" aria-current="page">Salidas</a>
+        <a href="evidence.html">Evidencias</a>
+      </nav>
+    </div>
+
+    <div class="page-title">
+      <h1>Emitir paquete (freeze versión) + generación de entregables</h1>
+      <div class="hint">Obligatorios: GIS + dataset + BIM LOD2/LOI2 + lámina + metrados.</div>
+    </div>
+
+    <div class="grid app">
+      <section class="panel">
+        <header>
+          <div class="hgroup">
+            <div class="kicker">Paquete</div>
+            <div class="name">Checklist previo a emisión</div>
+          </div>
+          <div class="toolbar">
+            <span class="btn">Validar</span>
+            <span class="btn primary">Emitir paquete</span>
+            <span class="btn danger">Cancelar</span>
+          </div>
+        </header>
+
+        <div class="content">
+          <section class="section">
+            <h2>Selección ganadora</h2>
+            <div class="row cols-2">
+              <div class="field">
+                <label>SET (ganador)</label>
+                <div class="input"><span>ALT-SET-02</span><span class="ghost">SET-ALT-002</span></div>
+              </div>
+              <div class="field">
+                <label>MT (ganador)</label>
+                <div class="input"><span>ALT-MT-03</span><span class="ghost">MT-ALT-003</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Checklist (bloqueante)</h2>
+            <table class="table" aria-label="Checklist emisión">
+              <thead>
+                <tr>
+                  <th>Control</th>
+                  <th>Resultado</th>
+                  <th>Detalle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SRID confirmado</td>
+                  <td><span class="badge"><span class="dot good"></span> OK</span></td>
+                  <td>EPSG:32717</td>
+                </tr>
+                <tr>
+                  <td>IDs por elemento asignados</td>
+                  <td><span class="badge"><span class="dot good"></span> OK</span></td>
+                  <td>SET + tramos MT + alternativa</td>
+                </tr>
+                <tr>
+                  <td>Restricciones con bandera</td>
+                  <td><span class="badge"><span class="dot med"></span> OK con warning</span></td>
+                  <td>Arqueológica cobertura parcial (evidencia)</td>
+                </tr>
+                <tr>
+                  <td>Metrados habilitados</td>
+                  <td><span class="badge"><span class="dot good"></span> OK</span></td>
+                  <td>Catálogo y codificación mínimos disponibles</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="section">
+            <h2>Entregables a generar (MVP)</h2>
+            <div class="cards-list">
+              <div class="item">
+                <div class="head">
+                  <div class="left">
+                    <div class="title">Mapa GIS de alternativas (SET + MT)</div>
+                    <div class="meta">Vista + capas + simbología mínima</div>
+                  </div>
+                  <span class="badge"><span class="dot good"></span> Obligatorio</span>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="head">
+                  <div class="left">
+                    <div class="title">Dataset GIS estándar + links al CDE</div>
+                    <div class="meta">Elementos con IDs + enlaces persistentes</div>
+                  </div>
+                  <span class="badge"><span class="dot good"></span> Obligatorio</span>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="head">
+                  <div class="left">
+                    <div class="title">Modelo BIM ligero (LOD2/LOI2)</div>
+                    <div class="meta">Para lámina + tablas (sin sobre-modelar)</div>
+                  </div>
+                  <span class="badge"><span class="dot good"></span> Obligatorio</span>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="head">
+                  <div class="left">
+                    <div class="title">Lámina esquemática (Revit)</div>
+                    <div class="meta">No constructivo · tipo corporativo</div>
+                  </div>
+                  <span class="badge"><span class="dot good"></span> Obligatorio</span>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="head">
+                  <div class="left">
+                    <div class="title">Tablas de planificación + metrados</div>
+                    <div class="meta">Con IDs y codificación para trazabilidad</div>
+                  </div>
+                  <span class="badge"><span class="dot good"></span> Obligatorio</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <header>
+          <div class="hgroup">
+            <div class="kicker">Resultado</div>
+            <div class="name">Versión emitida</div>
+          </div>
+          <div class="toolbar">
+            <span class="btn">Abrir en CDE</span>
+            <span class="btn">Copiar link</span>
+          </div>
+        </header>
+
+        <div class="content">
+          <section class="section">
+            <h2>Freeze</h2>
+            <div class="row cols-2">
+              <div class="field">
+                <label>Versión</label>
+                <div class="input"><span>v1.0</span><span class="ghost">emitida</span></div>
+              </div>
+              <div class="field">
+                <label>Paquete</label>
+                <div class="input"><span>PK-02</span><span class="ghost">ganador</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Links generados (CDE)</h2>
+            <div class="textarea">
+              • Carpeta caso: LINK-CDE-20001<br>
+              • Dataset GIS: LINK-CDE-20005<br>
+              • BIM LOD2/LOI2: LINK-CDE-20008<br>
+              • Lámina: LINK-CDE-20011<br>
+              • Metrados: LINK-CDE-20014
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Acciones</h2>
+            <div class="toolbar">
+              <span class="btn primary">Registrar aprobación</span>
+              <span class="btn">Crear nota de riesgos</span>
+            </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
