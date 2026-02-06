@@ -890,7 +890,7 @@ body{ min-height: 100dvh; }
   min-height: 0;     /* CLAVE para que el overflow funcione dentro del grid */
 }
 
-/* si tu panel tiene un contenedor .content úsalo para scrollear */
+/* si tu panel tiene un contenedor .content úsalo para scrollear */f
 .panel .content{
   flex: 1;
   min-height: 0;
@@ -1004,4 +1004,66 @@ body{ min-height: 100dvh; }
   background:
     linear-gradient(180deg, rgba(24,59,107,.04), transparent),
     var(--surface);
+}
+/* =========================
+   FIX v3 — Full viewport + scroll interno por panel
+   (pegar AL FINAL de styles.css)
+   ========================= */
+
+/* A) Sin bandas laterales */
+.container{
+  max-width: none !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+/* B) La página debe llenar el viewport y permitir que el grid “crezca” */
+html, body{ height: 100%; }
+body{
+  min-height: 100dvh;
+  display: flex;              /* clave */
+}
+.container{
+  flex: 1;                    /* clave */
+  display: flex;              /* clave */
+  flex-direction: column;     /* topbar + title + grid */
+  min-height: 100dvh;
+}
+
+/* C) El grid ocupa el alto restante (evita aire abajo) */
+.grid{
+  flex: 1;          /* clave */
+  min-height: 0;    /* clave para overflow interno */
+  align-items: stretch;
+}
+
+/* D) Panels: header fijo + content con scroll interno */
+.panel, .map, .col{
+  display: flex;
+  flex-direction: column;
+  min-height: 0;     /* clave */
+}
+
+/* tu HTML ya usa .content en la mayoría de paneles */
+.panel .content,
+.col .col-body{
+  flex: 1;
+  min-height: 0;
+  overflow: auto;    /* scroll interno */
+}
+
+/* E) Map canvas full-height */
+.map .canvas{
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+#map{
+  position: absolute;
+  inset: 0;
+}
+
+/* F) Si aún hay aire lateral por padding, baja el padding */
+@media (min-width: 1400px){
+  .container{ padding-left: 14px !important; padding-right: 14px !important; }
 }
