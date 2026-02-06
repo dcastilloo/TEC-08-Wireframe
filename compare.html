@@ -1,160 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TEC-08 — Comparación</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>TEC-08 — Comparación (ranking)</title>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <div class="title">TEC-08</div>
-        <div class="subtitle">Comparación y ranking</div>
-      </div>
-      <nav class="nav">
-        <a href="index.html">Index</a>
-        <a href="case-map.html">Mapa</a>
-        <a href="inputs.html">Entradas</a>
-        <a href="alternatives.html">Alternativas</a>
-        <a href="compare.html" aria-current="page">Comparación</a>
-        <a href="outputs.html">Salidas</a>
-        <a href="evidence.html">Evidencias</a>
-      </nav>
-    </div>
-
-    <div class="page-title">
-      <h1>Comparación de alternativas (SET + MT) · Pesos configurables por Caso</h1>
-      <div class="hint">Tabla comparativa + justificación auditable del score.</div>
-    </div>
-
-    <div class="grid app">
-      <section class="panel">
-        <header>
-          <div class="hgroup">
-            <div class="kicker">Comparador</div>
-            <div class="name">Métricas clave</div>
-          </div>
-          <div class="toolbar">
-            <span class="btn">Filtrar</span>
-            <span class="btn">Ordenar por Score</span>
-            <span class="btn primary">Aplicar pesos del Caso</span>
-          </div>
-        </header>
-
-        <div class="content">
-          <table class="table" aria-label="Comparación de alternativas">
-            <thead>
-              <tr>
-                <th>Paquete</th>
-                <th>SET</th>
-                <th>MT</th>
-                <th>Longitud MT</th>
-                <th>Caída tensión</th>
-                <th>Restricciones detectadas</th>
-                <th>Confiabilidad capas</th>
-                <th>Score total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>PK-01</td>
-                <td>ALT-SET-01</td>
-                <td>ALT-MT-01</td>
-                <td>8.4 km</td>
-                <td>4.1%</td>
-                <td>A:2 · Arq:1 · Serv:0</td>
-                <td>Híbrida</td>
-                <td><strong>71</strong></td>
-              </tr>
-              <tr>
-                <td>PK-02</td>
-                <td>ALT-SET-02</td>
-                <td>ALT-MT-03</td>
-                <td>7.1 km</td>
-                <td>3.4%</td>
-                <td>A:1 · Arq:0 · Serv:1</td>
-                <td>Híbrida</td>
-                <td><strong>82</strong></td>
-              </tr>
-              <tr>
-                <td>PK-03</td>
-                <td>ALT-SET-02</td>
-                <td>ALT-MT-01</td>
-                <td>8.4 km</td>
-                <td>4.1%</td>
-                <td>A:2 · Arq:1 · Serv:0</td>
-                <td>Híbrida</td>
-                <td><strong>75</strong></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <section class="section" style="margin-top:12px;">
-            <h2>Justificación (auditable)</h2>
-            <div class="textarea">
-              • PK-02 gana por menor longitud + menor caída de tensión + menos cruces en zonas restringidas.<br>
-              • Las restricciones arqueológicas tienen baja cobertura: se mantiene bandera y evidencia en CDE.<br>
+<div class="container">
+<div class="topbar">
+<div class="brand"><img alt="Distriluz" class="logo" src="LogoDistri2.png"/><div class="brand-text"><div class="title">TEC-08</div><div class="subtitle">Comparación (ranking)</div></div></div>
+<nav class="nav"><a href="index.html">Mapa</a>
+<a href="inputs.html">Entradas</a>
+<a href="alternatives.html">Alternativas</a>
+<a aria-current="page" href="compare.html">Comparación</a>
+<a href="outputs.html">Salidas</a>
+<a href="evidence.html">Evidencias</a></nav>
+</div>
+<div class="page-title">
+<h1>Comparación de alternativas (SET + MT) · Pesos configurables por Caso</h1>
+<div class="hint">Tabla comparativa + justificación auditable del score.</div>
+</div>
+<div class="grid app">
+<section class="panel">
+<header>
+<div class="hgroup">
+<div class="kicker">Comparador</div>
+<div class="name">Métricas clave</div>
+</div>
+<div class="toolbar">
+<span class="btn">Filtrar</span>
+<span class="btn">Ordenar por Score</span>
+<span class="btn primary">Aplicar pesos del Caso</span>
+</div>
+</header>
+<div class="content">
+<table aria-label="Comparación de alternativas" class="table">
+<thead>
+<tr>
+<th>Paquete</th>
+<th>SET</th>
+<th>MT</th>
+<th>Longitud MT</th>
+<th>Caída tensión</th>
+<th>Restricciones detectadas</th>
+<th>Confiabilidad capas</th>
+<th>Score total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PK-01</td>
+<td>ALT-SET-01</td>
+<td>ALT-MT-01</td>
+<td>8.4 km</td>
+<td>4.1%</td>
+<td>A:2 · Arq:1 · Serv:0</td>
+<td>Híbrida</td>
+<td><strong>71</strong></td>
+</tr>
+<tr>
+<td>PK-02</td>
+<td>ALT-SET-02</td>
+<td>ALT-MT-03</td>
+<td>7.1 km</td>
+<td>3.4%</td>
+<td>A:1 · Arq:0 · Serv:1</td>
+<td>Híbrida</td>
+<td><strong>82</strong></td>
+</tr>
+<tr>
+<td>PK-03</td>
+<td>ALT-SET-02</td>
+<td>ALT-MT-01</td>
+<td>8.4 km</td>
+<td>4.1%</td>
+<td>A:2 · Arq:1 · Serv:0</td>
+<td>Híbrida</td>
+<td><strong>75</strong></td>
+</tr>
+</tbody>
+</table>
+<section class="section" style="margin-top:12px;">
+<h2>Justificación (auditable)</h2>
+<div class="textarea">
+              • PK-02 gana por menor longitud + menor caída de tensión + menos cruces en zonas restringidas.<br/>
+              • Las restricciones arqueológicas tienen baja cobertura: se mantiene bandera y evidencia en CDE.<br/>
               • Pesos fueron ajustados por Caso (ver panel derecho).
             </div>
-          </section>
-        </div>
-      </section>
-
-      <aside class="panel">
-        <header>
-          <div class="hgroup">
-            <div class="kicker">Configuración del Caso</div>
-            <div class="name">Pesos de criterios</div>
-          </div>
-          <div class="toolbar">
-            <span class="btn">Restaurar</span>
-            <span class="btn primary">Guardar pesos</span>
-          </div>
-        </header>
-
-        <div class="content">
-          <section class="section">
-            <h2>Pesos (por Caso)</h2>
-            <div class="sub">Wireframe: sliders/texto (sin controles reales).</div>
-
-            <div class="field">
-              <label>Longitud MT</label>
-              <div class="input"><span>0.25</span><span class="ghost">peso</span></div>
-            </div>
-            <div class="field" style="margin-top:10px;">
-              <label>Restricciones detectadas</label>
-              <div class="input"><span>0.30</span><span class="ghost">peso</span></div>
-            </div>
-            <div class="field" style="margin-top:10px;">
-              <label>Confiabilidad de capas</label>
-              <div class="input"><span>0.15</span><span class="ghost">peso</span></div>
-            </div>
-            <div class="field" style="margin-top:10px;">
-              <label>Caída de tensión</label>
-              <div class="input"><span>0.30</span><span class="ghost">peso</span></div>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Acción</h2>
-            <div class="toolbar">
-              <span class="btn primary">Seleccionar ganador: PK-02</span>
-              <span class="btn">Volver a alternativas</span>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Notas</h2>
-            <div class="textarea">
-              • Pesos se guardan a nivel Caso.<br>
+</section>
+</div>
+</section>
+<aside class="panel">
+<header>
+<div class="hgroup">
+<div class="kicker">Configuración del Caso</div>
+<div class="name">Pesos de criterios</div>
+</div>
+<div class="toolbar">
+<span class="btn">Restaurar</span>
+<span class="btn primary">Guardar pesos</span>
+</div>
+</header>
+<div class="content">
+<section class="section">
+<h2>Pesos (por Caso)</h2>
+<div class="sub">Wireframe: sliders/texto (sin controles reales).</div>
+<div class="field">
+<label>Longitud MT</label>
+<div class="input"><span>0.25</span><span class="ghost">peso</span></div>
+</div>
+<div class="field" style="margin-top:10px;">
+<label>Restricciones detectadas</label>
+<div class="input"><span>0.30</span><span class="ghost">peso</span></div>
+</div>
+<div class="field" style="margin-top:10px;">
+<label>Confiabilidad de capas</label>
+<div class="input"><span>0.15</span><span class="ghost">peso</span></div>
+</div>
+<div class="field" style="margin-top:10px;">
+<label>Caída de tensión</label>
+<div class="input"><span>0.30</span><span class="ghost">peso</span></div>
+</div>
+</section>
+<section class="section">
+<h2>Acción</h2>
+<div class="toolbar">
+<span class="btn primary">Seleccionar ganador: PK-02</span>
+<span class="btn">Volver a alternativas</span>
+</div>
+</section>
+<section class="section">
+<h2>Notas</h2>
+<div class="textarea">
+              • Pesos se guardan a nivel Caso.<br/>
               • Todo cambio registra evidencia (quién/cuándo/por qué) en CDE (panel Evidencias).
             </div>
-          </section>
-        </div>
-      </aside>
-    </div>
-  </div>
+</section>
+</div>
+</aside>
+</div>
+</div>
 </body>
 </html>

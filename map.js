@@ -8,6 +8,14 @@
   const DEFAULT_CENTER = [-6.7714, -79.8409]; // Chiclayo aprox
   const DEFAULT_ZOOM = 13;
 
+  // ---- Branding colors (Distriluz) ----
+  const BRAND = {
+    navy: "#183B6B",
+    blue: "#226FB5",
+    green: "#47AA33",
+  };
+
+
   // ---- Init map ----
   const map = L.map("map", {
     zoomControl: true,
@@ -54,14 +62,14 @@
     L.latLng(DEFAULT_CENTER[0], DEFAULT_CENTER[1] + 0.015),
   ];
 
-  const routeLine = L.polyline(waypoints, { weight: 4, opacity: 0.85 }).addTo(map);
+  const routeLine = L.polyline(waypoints, { weight: 4, opacity: 0.9, color: BRAND.blue }).addTo(map);
 
   // Waypoint markers group
   const wpLayer = L.layerGroup().addTo(map);
   function redrawWaypointMarkers() {
     wpLayer.clearLayers();
     waypoints.forEach((p, idx) => {
-      const m = L.circleMarker(p, { radius: 5, weight: 2, opacity: 0.9, fillOpacity: 0.6 });
+      const m = L.circleMarker(p, { radius: 5, weight: 2, opacity: 0.95, color: BRAND.navy, fillColor: BRAND.green, fillOpacity: 0.65 });
       m.bindTooltip(`WP-${String(idx + 1).padStart(2, "0")}`, { permanent: false });
       m.addTo(wpLayer);
     });

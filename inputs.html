@@ -1,214 +1,199 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TEC-08 — Entradas (CDE)</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>TEC-08 — Entradas (CDE/ACC)</title>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <div class="title">TEC-08</div>
-        <div class="subtitle">Entradas (desde CDE/ACC)</div>
-      </div>
-      <nav class="nav">
-        <a href="index.html">Index</a>
-        <a href="case-map.html">Mapa</a>
-        <a href="inputs.html" aria-current="page">Entradas</a>
-        <a href="alternatives.html">Alternativas</a>
-        <a href="compare.html">Comparación</a>
-        <a href="outputs.html">Salidas</a>
-        <a href="evidence.html">Evidencias</a>
-      </nav>
-    </div>
-
-    <div class="page-title">
-      <h1>Entradas del Caso (CDE only)</h1>
-      <div class="hint">Selección desde CDE + validación + calidad híbrida (auto + override).</div>
-    </div>
-
-    <div class="grid app">
-      <section class="panel">
-        <header>
-          <div class="hgroup">
-            <div class="kicker">Selección desde CDE</div>
-            <div class="name">Insumos requeridos</div>
-          </div>
-          <div class="toolbar">
-            <span class="btn primary">Seleccionar desde CDE</span>
-            <span class="btn">Refrescar</span>
-            <span class="btn">Ver estructura estándar</span>
-          </div>
-        </header>
-
-        <div class="content">
-          <section class="section">
-            <h2>Checklist de completitud</h2>
-            <table class="table" aria-label="Checklist de insumos">
-              <thead>
-                <tr>
-                  <th>Insumo</th>
-                  <th>Origen (CDE)</th>
-                  <th>SRID</th>
-                  <th>Calidad (auto / manual)</th>
-                  <th>Estado</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Catastro red existente + puntos conexión</td>
-                  <td><span class="badge">LINK-CDE-01001</span></td>
-                  <td>Detectado</td>
-                  <td><span class="badge"><span class="dot good"></span> Alta / sin override</span></td>
-                  <td>OK</td>
-                </tr>
-                <tr>
-                  <td>Topografía / superficie</td>
-                  <td><span class="badge">LINK-CDE-01009</span></td>
-                  <td>Detectado</td>
-                  <td><span class="badge"><span class="dot med"></span> Media / override posible</span></td>
-                  <td>OK</td>
-                </tr>
-                <tr>
-                  <td>Ortofoto / satelital</td>
-                  <td><span class="badge">LINK-CDE-01012</span></td>
-                  <td>Detectado</td>
-                  <td><span class="badge"><span class="dot med"></span> Media / sin override</span></td>
-                  <td>OK</td>
-                </tr>
-                <tr>
-                  <td>Restricción ambiental</td>
-                  <td><span class="badge">LINK-CDE-01020</span></td>
-                  <td>Detectado</td>
-                  <td><span class="badge"><span class="dot med"></span> Media / override: Sí</span></td>
-                  <td>Warning</td>
-                </tr>
-                <tr>
-                  <td>Restricción arqueológica</td>
-                  <td><span class="badge">LINK-CDE-01028</span></td>
-                  <td>Detectado</td>
-                  <td><span class="badge"><span class="dot bad"></span> Baja / override: Sí</span></td>
-                  <td>Warning</td>
-                </tr>
-                <tr>
-                  <td>Servidumbre / propiedad</td>
-                  <td><span class="badge">LINK-CDE-01033</span></td>
-                  <td>Detectado</td>
-                  <td><span class="badge"><span class="dot good"></span> Alta / sin override</span></td>
-                  <td>OK</td>
-                </tr>
-                <tr>
-                  <td>Demanda (serie/proxy)</td>
-                  <td><span class="badge">LINK-CDE-01040</span></td>
-                  <td>N/A</td>
-                  <td><span class="badge"><span class="dot med"></span> Media / supuestos</span></td>
-                  <td>OK</td>
-                </tr>
-                <tr>
-                  <td>Catálogo materiales + codificación mínima</td>
-                  <td><span class="badge">LINK-CDE-01044</span></td>
-                  <td>N/A</td>
-                  <td><span class="badge"><span class="dot good"></span> Alta / fijo</span></td>
-                  <td>OK</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-
-          <section class="section">
-            <h2>Calidad híbrida (auto + override)</h2>
-            <div class="row cols-2">
-              <div class="field">
-                <label>Reglas automáticas (ej. fecha, cobertura, fuente)</label>
-                <div class="textarea">• Fecha última actualización<br>• Cobertura espacial (%)<br>• Fuente / confiabilidad</div>
-              </div>
-              <div class="field">
-                <label>Override manual (revisor)</label>
-                <div class="textarea">• Ajuste de calidad (Alta/Media/Baja)<br>• Justificación textual<br>• Evidencia CDE asociada</div>
-              </div>
-            </div>
-          </section>
-
-          <section class="modal">
-            <div class="top">
-              <div class="name">SRID detectado — requiere confirmación</div>
-              <span class="badge"><span class="dot good"></span> Detectado</span>
-            </div>
-            <div class="body">
+<div class="container">
+<div class="topbar">
+<div class="brand"><img alt="Distriluz" class="logo" src="LogoDistri2.png"/><div class="brand-text"><div class="title">TEC-08</div><div class="subtitle">Entradas (CDE/ACC)</div></div></div>
+<nav class="nav"><a href="index.html">Mapa</a>
+<a aria-current="page" href="inputs.html">Entradas</a>
+<a href="alternatives.html">Alternativas</a>
+<a href="compare.html">Comparación</a>
+<a href="outputs.html">Salidas</a>
+<a href="evidence.html">Evidencias</a></nav>
+</div>
+<div class="page-title">
+<h1>Entradas del Caso (CDE only)</h1>
+<div class="hint">Selección desde CDE + validación + calidad híbrida (auto + override).</div>
+</div>
+<div class="grid app">
+<section class="panel">
+<header>
+<div class="hgroup">
+<div class="kicker">Selección desde CDE</div>
+<div class="name">Insumos requeridos</div>
+</div>
+<div class="toolbar">
+<span class="btn primary">Seleccionar desde CDE</span>
+<span class="btn">Refrescar</span>
+<span class="btn">Ver estructura estándar</span>
+</div>
+</header>
+<div class="content">
+<section class="section">
+<h2>Checklist de completitud</h2>
+<table aria-label="Checklist de insumos" class="table">
+<thead>
+<tr>
+<th>Insumo</th>
+<th>Origen (CDE)</th>
+<th>SRID</th>
+<th>Calidad (auto / manual)</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Catastro red existente + puntos conexión</td>
+<td><span class="badge">LINK-CDE-01001</span></td>
+<td>Detectado</td>
+<td><span class="badge"><span class="dot good"></span> Alta / sin override</span></td>
+<td>OK</td>
+</tr>
+<tr>
+<td>Topografía / superficie</td>
+<td><span class="badge">LINK-CDE-01009</span></td>
+<td>Detectado</td>
+<td><span class="badge"><span class="dot med"></span> Media / override posible</span></td>
+<td>OK</td>
+</tr>
+<tr>
+<td>Ortofoto / satelital</td>
+<td><span class="badge">LINK-CDE-01012</span></td>
+<td>Detectado</td>
+<td><span class="badge"><span class="dot med"></span> Media / sin override</span></td>
+<td>OK</td>
+</tr>
+<tr>
+<td>Restricción ambiental</td>
+<td><span class="badge">LINK-CDE-01020</span></td>
+<td>Detectado</td>
+<td><span class="badge"><span class="dot med"></span> Media / override: Sí</span></td>
+<td>Warning</td>
+</tr>
+<tr>
+<td>Restricción arqueológica</td>
+<td><span class="badge">LINK-CDE-01028</span></td>
+<td>Detectado</td>
+<td><span class="badge"><span class="dot bad"></span> Baja / override: Sí</span></td>
+<td>Warning</td>
+</tr>
+<tr>
+<td>Servidumbre / propiedad</td>
+<td><span class="badge">LINK-CDE-01033</span></td>
+<td>Detectado</td>
+<td><span class="badge"><span class="dot good"></span> Alta / sin override</span></td>
+<td>OK</td>
+</tr>
+<tr>
+<td>Demanda (serie/proxy)</td>
+<td><span class="badge">LINK-CDE-01040</span></td>
+<td>N/A</td>
+<td><span class="badge"><span class="dot med"></span> Media / supuestos</span></td>
+<td>OK</td>
+</tr>
+<tr>
+<td>Catálogo materiales + codificación mínima</td>
+<td><span class="badge">LINK-CDE-01044</span></td>
+<td>N/A</td>
+<td><span class="badge"><span class="dot good"></span> Alta / fijo</span></td>
+<td>OK</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="section">
+<h2>Calidad híbrida (auto + override)</h2>
+<div class="row cols-2">
+<div class="field">
+<label>Reglas automáticas (ej. fecha, cobertura, fuente)</label>
+<div class="textarea">• Fecha última actualización<br/>• Cobertura espacial (%)<br/>• Fuente / confiabilidad</div>
+</div>
+<div class="field">
+<label>Override manual (revisor)</label>
+<div class="textarea">• Ajuste de calidad (Alta/Media/Baja)<br/>• Justificación textual<br/>• Evidencia CDE asociada</div>
+</div>
+</div>
+</section>
+<section class="modal">
+<div class="top">
+<div class="name">SRID detectado — requiere confirmación</div>
+<span class="badge"><span class="dot good"></span> Detectado</span>
+</div>
+<div class="body">
               Se detectó EPSG:32717 en las capas GIS. Confirma para permitir generación de alternativas y export coherente GIS/BIM.
             </div>
-            <div class="actions">
-              <span class="btn primary">Confirmar</span>
-              <span class="btn">Cambiar SRID</span>
-              <span class="btn">Ver capas con conflicto</span>
-            </div>
-          </section>
-
-        </div>
-      </section>
-
-      <aside class="panel">
-        <header>
-          <div class="hgroup">
-            <div class="kicker">Resumen</div>
-            <div class="name">Acciones de validación</div>
-          </div>
-          <div class="toolbar">
-            <span class="btn">Ir al mapa</span>
-            <span class="btn primary">Continuar → Generar alternativas</span>
-          </div>
-        </header>
-
-        <div class="content">
-          <section class="section">
-            <h2>Estado de insumos</h2>
-            <div class="cards-list">
-              <div class="item">
-                <div class="head">
-                  <div class="left">
-                    <div class="title">Restricciones arqueológicas</div>
-                    <div class="meta">Cobertura parcial · requiere precaución</div>
-                  </div>
-                  <span class="badge"><span class="dot bad"></span> Baja</span>
-                </div>
-                <div class="hr"></div>
-                <div class="toolbar">
-                  <span class="btn small">Crear tarea de levantamiento</span>
-                  <span class="btn small">Override a Media</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="head">
-                  <div class="left">
-                    <div class="title">Topografía</div>
-                    <div class="meta">Suficiente para MVP · revisar pendientes</div>
-                  </div>
-                  <span class="badge"><span class="dot med"></span> Media</span>
-                </div>
-                <div class="hr"></div>
-                <div class="toolbar">
-                  <span class="btn small">Ver diagnóstico</span>
-                  <span class="btn small">Aprobar para cálculo</span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Reglas mínimas para habilitar generación</h2>
-            <div class="textarea">
-              • SRID confirmado<br>
-              • Catastro y topografía en estado OK<br>
-              • Restricciones pueden quedar en Warning (con bandera)<br>
+<div class="actions">
+<span class="btn primary">Confirmar</span>
+<span class="btn">Cambiar SRID</span>
+<span class="btn">Ver capas con conflicto</span>
+</div>
+</section>
+</div>
+</section>
+<aside class="panel">
+<header>
+<div class="hgroup">
+<div class="kicker">Resumen</div>
+<div class="name">Acciones de validación</div>
+</div>
+<div class="toolbar">
+<span class="btn">Ir al mapa</span>
+<span class="btn primary">Continuar → Generar alternativas</span>
+</div>
+</header>
+<div class="content">
+<section class="section">
+<h2>Estado de insumos</h2>
+<div class="cards-list">
+<div class="item">
+<div class="head">
+<div class="left">
+<div class="title">Restricciones arqueológicas</div>
+<div class="meta">Cobertura parcial · requiere precaución</div>
+</div>
+<span class="badge"><span class="dot bad"></span> Baja</span>
+</div>
+<div class="hr"></div>
+<div class="toolbar">
+<span class="btn small">Crear tarea de levantamiento</span>
+<span class="btn small">Override a Media</span>
+</div>
+</div>
+<div class="item">
+<div class="head">
+<div class="left">
+<div class="title">Topografía</div>
+<div class="meta">Suficiente para MVP · revisar pendientes</div>
+</div>
+<span class="badge"><span class="dot med"></span> Media</span>
+</div>
+<div class="hr"></div>
+<div class="toolbar">
+<span class="btn small">Ver diagnóstico</span>
+<span class="btn small">Aprobar para cálculo</span>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Reglas mínimas para habilitar generación</h2>
+<div class="textarea">
+              • SRID confirmado<br/>
+              • Catastro y topografía en estado OK<br/>
+              • Restricciones pueden quedar en Warning (con bandera)<br/>
               • Catálogo/IDs disponibles
             </div>
-          </section>
-        </div>
-      </aside>
-    </div>
-  </div>
+</section>
+</div>
+</aside>
+</div>
+</div>
 </body>
 </html>
