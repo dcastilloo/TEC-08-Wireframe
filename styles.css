@@ -415,3 +415,73 @@ body{
 @media (max-width: 760px){
   .overlay{ width: calc(100% - 24px); position: absolute; left: 12px; right: 12px; }
 }
+/* =========================
+   OVERRIDE: Full width + Full viewport height
+   (pegar al FINAL del styles.css)
+   ========================= */
+
+/* 1) Quita el “marco” que deja bandas vacías */
+.container{
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 14px 18px 18px !important;
+}
+
+/* 2) Base: el layout debe poder estirarse en alto */
+html, body{ height: 100%; }
+body{ min-height: 100dvh; }
+
+/* 3) Grids: ocupar viewport y estirar hijos */
+.grid{
+  display: grid;
+  gap: var(--gap, 12px);
+  align-items: stretch;
+}
+
+/* 2 columnas (Mapa / Entradas / Compare / Salidas / Evidencias) */
+.grid.app{
+  grid-template-columns: minmax(680px, 1.7fr) minmax(380px, 1fr);
+  min-height: calc(100dvh - 120px); /* ajusta si tu topbar crece */
+}
+
+/* 3 columnas (Alternatives): tu HTML usa .grid (sin .app) */
+.grid:not(.app){
+  grid-template-columns: repeat(3, minmax(360px, 1fr));
+  min-height: calc(100dvh - 120px);
+}
+
+/* 4) Panels: deben ser “contenedores flex” para que el contenido haga scroll interno */
+.panel, .map{
+  display: flex;
+  flex-direction: column;
+  min-height: 0;     /* CLAVE para que el overflow funcione dentro del grid */
+}
+
+/* si tu panel tiene un contenedor .content úsalo para scrollear */
+.panel .content{
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+/* si no existe .content en algunos, igual permitimos scroll del panel */
+.panel{
+  overflow: hidden;
+}
+
+/* 5) Mapa: el canvas debe llenar el espacio */
+.map .canvas{
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+#map{
+  position: absolute;
+  inset: 0;
+}
+
+/* 6) Responsive: en pantallas medianas baja a una columna */
+@media (max-width: 1200px){
+  .grid.app{ grid-template-columns: 1fr; }
+  .grid:not(.app){ grid-template-columns: 1fr; }
+}
