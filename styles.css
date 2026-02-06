@@ -988,3 +988,20 @@ body{ min-height: 100dvh; }
   .grid.app{ grid-template-columns: 1fr; }
   .grid:not(.app){ grid-template-columns: 1fr; }
 }
+/* Alternativas: 3 columnas que llenan viewport */
+.grid.alt3{
+  display: grid;
+  grid-template-columns: 1fr 1fr .9fr;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* responsive */
+@media (max-width: 1200px){
+  .grid.alt3{ grid-template-columns: 1fr; }
+}
+.panel{
+  background:
+    linear-gradient(180deg, rgba(24,59,107,.04), transparent),
+    var(--surface);
+}
