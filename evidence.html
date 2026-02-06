@@ -1,162 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TEC-08 — Evidencias</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>TEC-08 — Evidencias (CDE)</title>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <div class="title">TEC-08</div>
-        <div class="subtitle">Evidencias / CDE (nivel elemento)</div>
-      </div>
-      <nav class="nav">
-        <a href="index.html">Index</a>
-        <a href="case-map.html">Mapa</a>
-        <a href="inputs.html">Entradas</a>
-        <a href="alternatives.html">Alternativas</a>
-        <a href="compare.html">Comparación</a>
-        <a href="outputs.html">Salidas</a>
-        <a href="evidence.html" aria-current="page">Evidencias</a>
-      </nav>
-    </div>
-
-    <div class="page-title">
-      <h1>Evidencias y trazabilidad (IDs + links persistentes)</h1>
-      <div class="hint">Vista auditable: elementos (SET / tramos MT) ↔ evidencias CDE ↔ decisiones.</div>
-    </div>
-
-    <div class="grid app">
-      <section class="panel">
-        <header>
-          <div class="hgroup">
-            <div class="kicker">Repositorio de evidencias</div>
-            <div class="name">Por elemento y por alternativa</div>
-          </div>
-          <div class="toolbar">
-            <span class="btn">Filtrar por tipo</span>
-            <span class="btn">Filtrar por alternativa</span>
-            <span class="btn primary">Nueva evidencia</span>
-          </div>
-        </header>
-
-        <div class="content">
-          <section class="section">
-            <h2>Buscador</h2>
-            <div class="row cols-2">
-              <div class="field">
-                <label>ID de elemento</label>
-                <div class="input"><span class="ghost">Ej: MT-SEG-0014</span><span>🔎</span></div>
-              </div>
-              <div class="field">
-                <label>Alternativa</label>
-                <div class="input"><span>ALT-MT-03</span><span>▼</span></div>
-              </div>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Evidencias (lista)</h2>
-            <div class="cards-list">
-              <div class="item">
-                <div class="head">
-                  <div class="left">
-                    <div class="title">MT-SEG-0014 · Evidencia restricción ambiental</div>
-                    <div class="meta">LINK-CDE-00091 · fuente externa · calidad: media</div>
-                  </div>
-                  <span class="badge"><span class="dot med"></span> Ambiental</span>
-                </div>
-                <div class="hr"></div>
-                <div class="toolbar">
-                  <span class="btn small">Abrir link</span>
-                  <span class="btn small">Adjuntar comentario</span>
-                  <span class="btn small">Override calidad</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="head">
-                  <div class="left">
-                    <div class="title">SET-ALT-002 · Accesibilidad vial (captura)</div>
-                    <div class="meta">LINK-CDE-00110 · imagen satelital · calidad: media</div>
-                  </div>
-                  <span class="badge"><span class="dot med"></span> Contexto</span>
-                </div>
-                <div class="hr"></div>
-                <div class="toolbar">
-                  <span class="btn small">Abrir link</span>
-                  <span class="btn small">Marcar como clave</span>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="head">
-                  <div class="left">
-                    <div class="title">ALT-MT-03 · Cálculo caída de tensión (resumen)</div>
-                    <div class="meta">LINK-CDE-00131 · metodología simple · supuestos</div>
-                  </div>
-                  <span class="badge"><span class="dot good"></span> Técnico</span>
-                </div>
-                <div class="hr"></div>
-                <div class="toolbar">
-                  <span class="btn small">Abrir link</span>
-                  <span class="btn small">Ver supuestos</span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
-
-      <aside class="panel">
-        <header>
-          <div class="hgroup">
-            <div class="kicker">Revisión / Aprobación</div>
-            <div class="name">Registro de decisión</div>
-          </div>
-          <div class="toolbar">
-            <span class="btn">Ver historial</span>
-            <span class="btn primary">Registrar aprobación</span>
-          </div>
-        </header>
-
-        <div class="content">
-          <section class="section">
-            <h2>Decisión actual</h2>
-            <div class="row cols-2">
-              <div class="field">
-                <label>Paquete ganador</label>
-                <div class="input"><span>PK-02</span><span class="ghost">v1.0</span></div>
-              </div>
-              <div class="field">
-                <label>Motivo principal</label>
-                <div class="input"><span>ΔV + restricciones</span><span class="ghost">auditable</span></div>
-              </div>
-            </div>
-          </section>
-
-          <section class="section">
-            <h2>Notas de riesgo (MVP)</h2>
-            <div class="textarea">
-              • Arqueología con cobertura baja → mantener bandera + plan de levantamiento/procura.<br>
+<div class="container">
+<div class="topbar">
+<div class="brand"><img alt="Distriluz" class="logo" src="LogoDistri2.png"/><div class="brand-text"><div class="title">TEC-08</div><div class="subtitle">Evidencias (CDE)</div></div></div>
+<nav class="nav"><a href="index.html">Mapa</a>
+<a href="inputs.html">Entradas</a>
+<a href="alternatives.html">Alternativas</a>
+<a href="compare.html">Comparación</a>
+<a href="outputs.html">Salidas</a>
+<a aria-current="page" href="evidence.html">Evidencias</a></nav>
+</div>
+<div class="page-title">
+<h1>Evidencias y trazabilidad (IDs + links persistentes)</h1>
+<div class="hint">Vista auditable: elementos (SET / tramos MT) ↔ evidencias CDE ↔ decisiones.</div>
+</div>
+<div class="grid app">
+<section class="panel">
+<header>
+<div class="hgroup">
+<div class="kicker">Repositorio de evidencias</div>
+<div class="name">Por elemento y por alternativa</div>
+</div>
+<div class="toolbar">
+<span class="btn">Filtrar por tipo</span>
+<span class="btn">Filtrar por alternativa</span>
+<span class="btn primary">Nueva evidencia</span>
+</div>
+</header>
+<div class="content">
+<section class="section">
+<h2>Buscador</h2>
+<div class="row cols-2">
+<div class="field">
+<label>ID de elemento</label>
+<div class="input"><span class="ghost">Ej: MT-SEG-0014</span><span>🔎</span></div>
+</div>
+<div class="field">
+<label>Alternativa</label>
+<div class="input"><span>ALT-MT-03</span><span>▼</span></div>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Evidencias (lista)</h2>
+<div class="cards-list">
+<div class="item">
+<div class="head">
+<div class="left">
+<div class="title">MT-SEG-0014 · Evidencia restricción ambiental</div>
+<div class="meta">LINK-CDE-00091 · fuente externa · calidad: media</div>
+</div>
+<span class="badge"><span class="dot med"></span> Ambiental</span>
+</div>
+<div class="hr"></div>
+<div class="toolbar">
+<span class="btn small">Abrir link</span>
+<span class="btn small">Adjuntar comentario</span>
+<span class="btn small">Override calidad</span>
+</div>
+</div>
+<div class="item">
+<div class="head">
+<div class="left">
+<div class="title">SET-ALT-002 · Accesibilidad vial (captura)</div>
+<div class="meta">LINK-CDE-00110 · imagen satelital · calidad: media</div>
+</div>
+<span class="badge"><span class="dot med"></span> Contexto</span>
+</div>
+<div class="hr"></div>
+<div class="toolbar">
+<span class="btn small">Abrir link</span>
+<span class="btn small">Marcar como clave</span>
+</div>
+</div>
+<div class="item">
+<div class="head">
+<div class="left">
+<div class="title">ALT-MT-03 · Cálculo caída de tensión (resumen)</div>
+<div class="meta">LINK-CDE-00131 · metodología simple · supuestos</div>
+</div>
+<span class="badge"><span class="dot good"></span> Técnico</span>
+</div>
+<div class="hr"></div>
+<div class="toolbar">
+<span class="btn small">Abrir link</span>
+<span class="btn small">Ver supuestos</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+<aside class="panel">
+<header>
+<div class="hgroup">
+<div class="kicker">Revisión / Aprobación</div>
+<div class="name">Registro de decisión</div>
+</div>
+<div class="toolbar">
+<span class="btn">Ver historial</span>
+<span class="btn primary">Registrar aprobación</span>
+</div>
+</header>
+<div class="content">
+<section class="section">
+<h2>Decisión actual</h2>
+<div class="row cols-2">
+<div class="field">
+<label>Paquete ganador</label>
+<div class="input"><span>PK-02</span><span class="ghost">v1.0</span></div>
+</div>
+<div class="field">
+<label>Motivo principal</label>
+<div class="input"><span>ΔV + restricciones</span><span class="ghost">auditable</span></div>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Notas de riesgo (MVP)</h2>
+<div class="textarea">
+              • Arqueología con cobertura baja → mantener bandera + plan de levantamiento/procura.<br/>
               • Restricciones externas desactualizadas → override justificado + evidencia CDE.
             </div>
-          </section>
-
-          <section class="section">
-            <h2>Acciones</h2>
-            <div class="toolbar">
-              <span class="btn">Generar acta interna</span>
-              <span class="btn">Crear tarea de levantamiento</span>
-              <span class="btn">Ir a emitir paquete</span>
-            </div>
-          </section>
-        </div>
-      </aside>
-    </div>
-  </div>
+</section>
+<section class="section">
+<h2>Acciones</h2>
+<div class="toolbar">
+<span class="btn">Generar acta interna</span>
+<span class="btn">Crear tarea de levantamiento</span>
+<span class="btn">Ir a emitir paquete</span>
+</div>
+</section>
+</div>
+</aside>
+</div>
+</div>
 </body>
 </html>

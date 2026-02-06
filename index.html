@@ -1,150 +1,207 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TEC-08 Wireframe — Index</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>TEC-08 — Mapa del caso</title>
+<link href="styles.css" rel="stylesheet"/>
+<!-- Leaflet CSS -->
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 </head>
 <body>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <div class="title">TEC-08 — Wireframe (MVP)</div>
-        <div class="subtitle">Gestión inteligente de proyectos (SET + MT)</div>
-      </div>
-      <nav class="nav">
-        <a href="index.html" aria-current="page">Index</a>
-        <a href="case-map.html">Mapa del caso</a>
-        <a href="inputs.html">Entradas (CDE)</a>
-        <a href="alternatives.html">Alternativas</a>
-        <a href="compare.html">Comparación</a>
-        <a href="outputs.html">Salidas</a>
-        <a href="evidence.html">Evidencias</a>
-      </nav>
-    </div>
-
-    <div class="page-title">
-      <h1>Vistas del wireframe</h1>
-      <div class="hint">Wireframe estructural (sin diseño visual final). Navega por links o revisa previews embebidos.</div>
-    </div>
-
-    <div class="grid cards">
-      <a class="card" href="case-map.html">
-        <div>
-          <h3>Mapa del Caso (principal)</h3>
-          <p>Vista map-first: capas GIS + herramientas de edición (mover SET / waypoints) + panel lateral con tabs.</p>
-        </div>
-        <div class="meta">
-          <span class="pill">Mapa 70%</span><span class="pill">Panel 30%</span><span class="pill">SRID: detect+confirma</span>
-        </div>
-      </a>
-
-      <a class="card" href="inputs.html">
-        <div>
-          <h3>Entradas (desde CDE)</h3>
-          <p>Selección de insumos desde ACC/CDE, checklist de completitud, calidad de capas (auto + override).</p>
-        </div>
-        <div class="meta">
-          <span class="pill">CDE only</span><span class="pill">Calidad híbrida</span><span class="pill">Validación</span>
-        </div>
-      </a>
-
-      <a class="card" href="alternatives.html">
-        <div>
-          <h3>Alternativas (SET y MT separadas)</h3>
-          <p>Gestión de candidatos SET y rutas MT; combinación en “Paquete” con IDs asignados al generar alternativa.</p>
-        </div>
-        <div class="meta">
-          <span class="pill">SET vs MT</span><span class="pill">IDs por elemento</span><span class="pill">Caída de tensión</span>
-        </div>
-      </a>
-
-      <a class="card" href="compare.html">
-        <div>
-          <h3>Comparación y ranking</h3>
-          <p>Tabla comparativa, criterios y pesos por Caso, explicación auditable del score.</p>
-        </div>
-        <div class="meta">
-          <span class="pill">Pesos por Caso</span><span class="pill">Score</span><span class="pill">Justificación</span>
-        </div>
-      </a>
-
-      <a class="card" href="outputs.html">
-        <div>
-          <h3>Salidas y “Emitir paquete”</h3>
-          <p>Congela versión, genera GIS + dataset + BIM LOD2/LOI2 + lámina esquemática + metrados.</p>
-        </div>
-        <div class="meta">
-          <span class="pill">Freeze v#</span><span class="pill">Export</span><span class="pill">Checklist</span>
-        </div>
-      </a>
-
-      <a class="card" href="evidence.html">
-        <div>
-          <h3>Evidencias / CDE</h3>
-          <p>Trazabilidad a nivel elemento: links persistentes, evidencias por tramo/punto y registro de revisión.</p>
-        </div>
-        <div class="meta">
-          <span class="pill">Link por elemento</span><span class="pill">Auditable</span><span class="pill">Revisión</span>
-        </div>
-      </a>
-    </div>
-
-    <div class="page-title">
-      <h1>Previews embebidos</h1>
-      <div class="hint">Útil para revisar todo de un vistazo (wireframe “agregado”).</div>
-    </div>
-
-    <section class="preview-grid">
-      <div class="preview">
-        <header>
-          <div class="name">Mapa del caso</div>
-          <a class="pill" href="case-map.html">Abrir</a>
-        </header>
-        <iframe src="case-map.html" title="Mapa del caso"></iframe>
-      </div>
-
-      <div class="preview">
-        <header>
-          <div class="name">Entradas (CDE)</div>
-          <a class="pill" href="inputs.html">Abrir</a>
-        </header>
-        <iframe src="inputs.html" title="Entradas (CDE)"></iframe>
-      </div>
-
-      <div class="preview">
-        <header>
-          <div class="name">Alternativas</div>
-          <a class="pill" href="alternatives.html">Abrir</a>
-        </header>
-        <iframe src="alternatives.html" title="Alternativas"></iframe>
-      </div>
-
-      <div class="preview">
-        <header>
-          <div class="name">Comparación</div>
-          <a class="pill" href="compare.html">Abrir</a>
-        </header>
-        <iframe src="compare.html" title="Comparación"></iframe>
-      </div>
-
-      <div class="preview">
-        <header>
-          <div class="name">Salidas</div>
-          <a class="pill" href="outputs.html">Abrir</a>
-        </header>
-        <iframe src="outputs.html" title="Salidas"></iframe>
-      </div>
-
-      <div class="preview">
-        <header>
-          <div class="name">Evidencias</div>
-          <a class="pill" href="evidence.html">Abrir</a>
-        </header>
-        <iframe src="evidence.html" title="Evidencias"></iframe>
-      </div>
-    </section>
-  </div>
-</body>
+<div class="container">
+<div class="topbar">
+<div class="brand"><img alt="Distriluz" class="logo" src="LogoDistri2.png"/><div class="brand-text"><div class="title">TEC-08</div><div class="subtitle">Gestión inteligente de proyectos (SET + MT) — Mapa del caso</div></div></div>
+<nav class="nav"><a aria-current="page" href="index.html">Mapa</a>
+<a href="inputs.html">Entradas</a>
+<a href="alternatives.html">Alternativas</a>
+<a href="compare.html">Comparación</a>
+<a href="outputs.html">Salidas</a>
+<a href="evidence.html">Evidencias</a></nav>
+<span class="btn primary icon" id="btnViews" role="button" tabindex="0"><span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>Vistas</span></div>
+<div class="page-title">
+<h1>CASO: SET = “SET Chiclayo Norte” · MT (Alimentador) = “ALIM-MT-07”</h1>
+<div class="hint">Map-first + panel lateral. IDs se asignan al generar alternativas.</div>
+</div>
+<div class="grid app">
+<!-- MAP -->
+<section aria-label="Mapa GIS" class="map">
+<header>
+<div class="left">
+<div class="kicker">Capas · edición · demanda</div>
+<div class="title">Mapa GIS del caso</div>
+</div>
+<div aria-label="Herramientas de mapa" class="toolbar">
+<span class="btn" id="btnLayers" role="button" tabindex="0">Capas</span>
+<span class="btn" id="btnLegend" role="button" tabindex="0">Leyenda</span>
+<span class="btn" id="btnMeasure" role="button" tabindex="0">Medir</span>
+<span class="btn primary" id="btnMoveSet" role="button" tabindex="0">Mover SET</span>
+<span class="btn primary" id="btnWaypoints" role="button" tabindex="0">Waypoints</span>
+<span class="btn" id="btnRecalc" role="button" tabindex="0">Recalcular ruta</span>
+<span class="btn" id="btnDetail" role="button" tabindex="0">Detalle tramo/punto</span>
+</div>
+</header>
+<div class="canvas">
+<!-- Leaflet map -->
+<div aria-label="Mapa Leaflet" id="map"></div>
+<!-- Overlays -->
+<div aria-label="Overlays" class="overlay">
+<div class="box">
+<h4>Contexto del Caso</h4>
+<div class="mini">
+<div>SET objetivo: <strong>SET Chiclayo Norte</strong></div>
+<div>Alimentador MT: <strong>ALIM-MT-07</strong></div>
+<div>SRID detectado: <strong>EPSG:32717</strong></div>
+<div>Estado: <strong>Alternativas generadas</strong></div>
+</div>
+</div>
+<div class="box">
+<h4>Demanda (heatmap)</h4>
+<div class="mini">
+<div>Horizon: <strong>5 años</strong></div>
+<div>Fuente: <strong>series + proxy urbano</strong></div>
+<div>Salida: <strong>heatmap + tabla</strong></div>
+</div>
+</div>
+<div class="box">
+<h4>Restricciones (detalle)</h4>
+<div class="mini">
+<div><span class="badge"><span class="dot med"></span> Ambiental</span> · calidad híbrida</div>
+<div><span class="badge"><span class="dot bad"></span> Arqueológica</span> · cobertura parcial</div>
+<div><span class="badge"><span class="dot good"></span> Servidumbre</span> · validada</div>
+</div>
+</div>
+<div class="box">
+<h4>Modo edición</h4>
+<div class="mini">
+<div>• <strong>Mover SET</strong>: click en mapa para reubicar</div>
+<div>• <strong>Waypoints</strong>: click para añadir puntos y recalcular “wire”</div>
+<div style="margin-top:6px;color:#777;">(Esto es demo UX, no cálculo real.)</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div>Atajos: [Click] seleccionar · [Shift+Click] detalle · [Ctrl] snap waypoint</div>
+<div class="footer-actions">
+<span class="btn small" id="btnSaveView" role="button" tabindex="0">Guardar vista</span>
+<span class="btn small" id="btnShare" role="button" tabindex="0">Compartir link</span>
+<a class="btn small" href="compare.html">Ir a comparación</a>
+</div>
+</footer>
+</section>
+<!-- RIGHT PANEL -->
+<aside aria-label="Panel lateral del caso" class="panel">
+<header>
+<div class="hgroup">
+<div class="kicker">Panel del Caso</div>
+<div class="name">Entradas · Alternativas · Comparación · Salidas</div>
+</div>
+<div aria-label="Tabs" class="tabs">
+<a class="tab" href="inputs.html">Entradas</a>
+<a class="tab" href="alternatives.html">Alternativas</a>
+<a class="tab" href="compare.html">Comparación</a>
+<a class="tab" href="outputs.html">Salidas</a>
+<a class="tab" href="evidence.html">Evidencias</a>
+</div>
+</header>
+<div class="content">
+<section class="section">
+<h2>Resumen</h2>
+<div class="row cols-2">
+<div class="field">
+<label>SET</label>
+<div class="input"><span>SET Chiclayo Norte</span><span class="ghost">ID: SET-ALT-001</span></div>
+</div>
+<div class="field">
+<label>MT (Alimentador)</label>
+<div class="input"><span>ALIM-MT-07</span><span class="ghost">ID: MT-ALT-003</span></div>
+</div>
+</div>
+<div class="row cols-2" style="margin-top:10px;">
+<div class="field">
+<label>Alternativa seleccionada</label>
+<div class="input"><span>ALT-SET-02</span><span class="ghost">Score 82</span></div>
+</div>
+<div class="field">
+<label>Ruta seleccionada</label>
+<div class="input"><span>ALT-MT-03</span><span class="ghost">ΔV 3.4%</span></div>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Acciones rápidas</h2>
+<div class="toolbar">
+<span class="btn primary" role="button" tabindex="0">Generar alternativas</span>
+<span class="btn" role="button" tabindex="0">Recalcular con pesos</span>
+<span class="btn" role="button" tabindex="0">Abrir detalle restricción</span>
+<a class="btn" href="compare.html">Ir a comparación</a>
+</div>
+</section>
+<section class="section">
+<h2>Elementos seleccionados (detalle)</h2>
+<div class="sub">Detalle por tramo/punto + evidencias (nivel elemento).</div>
+<div class="item">
+<div class="head">
+<div class="left">
+<div class="title">Tramo MT — Segmento 14</div>
+<div class="meta">ID: MT-SEG-0014 · ALT-MT-03</div>
+</div>
+<span class="badge"><span class="dot med"></span> Restricción: Ambiental</span>
+</div>
+<div class="kv">
+<div>
+<div class="k">Pendiente</div>
+<div class="v">6.2%</div>
+</div>
+<div>
+<div class="k">Cruces</div>
+<div class="v">2</div>
+</div>
+<div>
+<div class="k">Confiabilidad capa</div>
+<div class="v">Media (auto) + override: No</div>
+</div>
+<div>
+<div class="k">Evidencia en CDE</div>
+<div class="v">LINK-CDE-00091</div>
+</div>
+</div>
+<div class="hr"></div>
+<div class="toolbar">
+<span class="btn small" role="button" tabindex="0">Ver evidencia</span>
+<span class="btn small" role="button" tabindex="0">Marcar override</span>
+<span class="btn small" role="button" tabindex="0">Crear comentario</span>
+</div>
+</div>
+</section>
+<section aria-label="Modal SRID detectado" class="modal">
+<div class="top">
+<div class="name">Confirmación de sistema de referencia (SRID)</div>
+<span class="badge"><span class="dot good"></span> Detectado</span>
+</div>
+<div class="body">
+              Se detectó <strong>EPSG:32717</strong> para capas del caso. Confirma para mantener coherencia GIS/BIM y evitar desalineaciones.
+            </div>
+<div class="actions">
+<span class="btn primary" role="button" tabindex="0">Confirmar EPSG:32717</span>
+<span class="btn" role="button" tabindex="0">Cambiar SRID</span>
+<span class="btn" role="button" tabindex="0">Ver diagnóstico</span>
+</div>
+</section>
+</div>
+</aside>
+</div>
+</div>
+<!-- Leaflet JS -->
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Map logic -->
+<script src="map.js"></script>
+<div class="drawer-backdrop" id="drawerBackdrop"></div><aside aria-label="Vistas del wireframe" class="drawer" id="drawer"><header><div class="title">Vistas del wireframe (TEC-08)</div><div class="sub">Hub rápido para navegar y explicar el MVP sin perder el mapa como pantalla principal.</div></header><div class="content"><div class="links"><div class="link-card"><div class="name">Entradas (CDE/ACC)</div><div class="desc">Selecciona insumos desde CDE + SRID + bandera de calidad (auto/override).</div><a href="inputs.html">Abrir</a></div><div class="link-card"><div class="name">Alternativas (SET + MT)</div><div class="desc">Genera 2–4 opciones de SET y rutas MT con criterios y restricciones.</div><a href="alternatives.html">Abrir</a></div><div class="link-card"><div class="name">Comparación (ranking)</div><div class="desc">Compara alternativas: longitud, restricciones, score total, confiabilidad, caída de tensión.</div><a href="compare.html">Abrir</a></div><div class="link-card"><div class="name">Salidas (paquete)</div><div class="desc">Emite GIS + dataset + BIM LOD2/LOI2 + lámina + metrados (freeze versión).</div><a href="outputs.html">Abrir</a></div><div class="link-card"><div class="name">Evidencias (CDE)</div><div class="desc">Trazabilidad: IDs + links persistentes a evidencias auditables en el CDE.</div><a href="evidence.html">Abrir</a></div></div></div></aside><script src="ui.js"></script></body>
 </html>
+
+
+
+
+
